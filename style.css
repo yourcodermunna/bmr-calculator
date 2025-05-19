@@ -1,28 +1,31 @@
+
 body {
-    font-family: 'Siyam Rupali', sans-serif;
-    background-color: #f0f8ff;
-    max-width: 600px;
-    margin: auto;
+    font-family: 'SolaimanLipi', sans-serif;
     padding: 20px;
-    border-radius: 10px;
+    background-color: #f4f4f4;
 }
-label, select, input, button {
+
+input, select, button {
     display: block;
     margin-bottom: 15px;
-    width: 100%;
+    padding: 8px;
     font-size: 16px;
 }
+
 button {
-    background-color: #4CAF50;
+    background-color: #28a745;
     color: white;
-    padding: 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: #218838;
+}
+
 #result {
-    background: #e7f3fe;
+    margin-top: 20px;
+    background: #fff;
     padding: 15px;
-    border-radius: 5px;
-    font-weight: bold;
+    border: 1px solid #ccc;
 }
