@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>BMR, TDEE ও BMI ক্যালকুলেটর</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>BMR, TDEE ও BMI ক্যালকুলেটর (বাংলা)</h2>
+
+    <label>ওজন (কেজি):</label>
+    <input type="number" id="weight">
+
+    <label>উচ্চতা:</label>
+    <select id="heightUnit" onchange="toggleHeightUnit()">
+        <option value="cm">সেন্টিমিটার</option>
+        <option value="ftin">ফুট-ইঞ্চি</option>
+    </select>
+
+    <div id="cmInput">
+        <input type="number" id="heightCm" placeholder="উচ্চতা (সেমি)">
+    </div>
+
+    <div id="ftinInput" style="display:none">
+        <input type="number" id="heightFt" placeholder="ফুট">
+        <input type="number" id="heightIn" placeholder="ইঞ্চি">
+    </div>
+
+    <label>বয়স (বছর):</label>
+    <input type="number" id="age">
+
+    <label>লিঙ্গ:</label>
+    <select id="gender">
+        <option value="male">পুরুষ</option>
+        <option value="female">মহিলা</option>
+    </select>
+
+    <label>শারীরিক কাজের মাত্রা:</label>
+    <select id="activity">
+        <option value="1.2">কম (বসে থাকা কাজ)</option>
+        <option value="1.375">মাঝারি (সপ্তাহে ১-৩ বার হালকা ব্যায়াম)</option>
+        <option value="1.55">নিয়মিত (সপ্তাহে ৩-৫ দিন ব্যায়াম)</option>
+        <option value="1.725">বেশি (প্রতিদিন ব্যায়াম বা শারীরিক পরিশ্রম)</option>
+    </select>
+
+    <button onclick="calculateAll()">হিসাব করুন</button>
+    <button onclick="downloadPDF()">PDF সংরক্ষণ করুন</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
